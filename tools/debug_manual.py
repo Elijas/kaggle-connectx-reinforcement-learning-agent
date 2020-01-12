@@ -1,5 +1,5 @@
 from agents import selects_leftmost
-from tools._debug import debug_steps
+from tools._debug_steps import debug_steps
 
 
 def step_manual(observation, env):
