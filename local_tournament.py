@@ -2,7 +2,7 @@ import kaggle_environments
 
 from bots import always_select_first
 
-NUM_EPISODES = 100
+NUM_EPISODES = 500
 AGENTS = [
     'random',
     always_select_first.act

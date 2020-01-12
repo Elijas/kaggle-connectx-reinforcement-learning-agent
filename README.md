@@ -4,10 +4,8 @@
 
 # Actions
 
-- Upload a bot to competition (Note: there's a limit of 2 submissions per 24h):
+- Evaluate agent performance by using `local_tournament.py`
 
-`kaggle competitions submit -c connectx -f bots/200112-example.py`
+- Upload an agent to the official competition (Note: there's a limit of 2 submissions per 24h):
 
-- Upload a bot to competition (Note: there's a limit of 2 submissions per 24h):
-
-`kaggle competitions submit -c connectx -f bots/200112-example.py`
+`$ kaggle competitions submit -c connectx -f bots/always_select_first.py`
