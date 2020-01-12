@@ -30,7 +30,7 @@ Note, there's a limit of 2 submissions per 24 hours.
 The board size and winning condition may change in the future. Add an `assert` at the top of an agent function if the agent is depending on the conditions. For example, to play only in games with the default configuration, use:
 ```
 assert configuration.columns == 7 \
-and configuration.rows == 6 \
-and configuration.inarow == 4 \
-and configuration.timeout >= 5
+    and configuration.rows == 6 \
+    and configuration.inarow == 4 \
+    and configuration.timeout >= 5
 ```
