@@ -5,8 +5,10 @@
 # Development tools
 
 - Render an instance of a game: `tools/run.ipynb`
+
     - Debug individual steps with a function: `tools/debug.py`
     - Play against an agent yourself: `tools/debug_manual.py`
+    
 - Evaluate agent performance: `tools/evaluate.py`
 
 # Deployment
