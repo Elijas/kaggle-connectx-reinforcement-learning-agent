@@ -24,3 +24,10 @@ Note, there's a limit of 2 submissions per 24 hours.
 
 1. Create a file in `./agents` folder.
 2. Add the agent's act function to the `AGENTS` array (`./tools/evaluate.py`).
+
+# Additional notes
+
+The board size and winning condition may change in the future. Add an `assert` at the top of an agent function if the agent is depending on the conditions. 
+```
+assert configuration.columns == 7 and configuration.rows == 6 and configuration.inarow == 4
+```

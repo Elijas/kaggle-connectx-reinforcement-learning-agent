@@ -5,6 +5,7 @@ from kaggle_environments.envs.connectx import connectx
 
 
 def act(observation, configuration):
+    assert configuration.columns == 7 and configuration.rows == 6 and configuration.inarow == 4
     # me:me_or_enemy=1, enemy:me_or_enemy=2
     def check_vertical_chance(me_or_enemy):
         for i in range(0, 7):

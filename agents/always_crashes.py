@@ -1,2 +1,2 @@
-def act():
+def act(observation, configuration):
     raise Exception
