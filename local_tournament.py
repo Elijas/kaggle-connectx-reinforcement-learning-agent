@@ -17,13 +17,11 @@ def evaluate_1v1(agent1, agent2, num_episodes):
     return mean_reward(evaluation)
 
 
-def evaluate_vs_everyone(agent):
-    enemy_agents = [a for a in AGENTS if a != agent]
+def evaluate_vs_others(agent, enemy_agents=None):
+    enemy_agents = [a for a in enemy_agents or AGENTS if a != agent]
     assert enemy_agents
-    score = sum(evaluate_1v1(agent, enemy_agent, NUM_EPISODES) for enemy_agent in enemy_agents) / len(enemy_agents)
-    return score
+    return sum(evaluate_1v1(agent, enemy_agent, NUM_EPISODES) for enemy_agent in enemy_agents) / len(enemy_agents)
 
 
 if __name__ == '__main__':
-    agent = always_select_first.act
-    print(evaluate_vs_everyone(agent))
+    print(evaluate_vs_others(always_select_first.act))
