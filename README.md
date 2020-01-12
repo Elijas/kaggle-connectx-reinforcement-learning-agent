@@ -19,3 +19,8 @@ To upload `agents/selects_leftmost.py` agent:
 2. Run `$ ./deploy.sh selects_leftmost`
 
 Note, there's a limit of 2 submissions per 24 hours.
+
+# Creating a new agent
+
+1. Create a file in `./agents` folder.
+2. Add the agent's act function to the `AGENTS` array (`./tools/evaluate.py`).

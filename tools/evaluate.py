@@ -1,12 +1,13 @@
 import kaggle_environments
 
-from agents import selects_leftmost
+from agents import selects_leftmost, enemy_bluefool
 
-NUM_EPISODES = 500
+NUM_EPISODES = 3
 AGENTS = [
     'random',
     'negamax',
-    selects_leftmost.act
+    selects_leftmost.act,
+    enemy_bluefool.act
 ]
 
 
@@ -27,5 +28,5 @@ def evaluate_vs_others(agent, enemy_agents=None):
 
 
 if __name__ == '__main__':
-    # print(evaluate_1v1(selects_leftmost.act, 'random', 1))
-    print(evaluate_vs_others(selects_leftmost.act))
+    print(evaluate_1v1(enemy_bluefool.act, 'negamax', 100))
+    # print(evaluate_vs_others(enemy_bluefool.act))
