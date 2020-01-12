@@ -1,8 +1,8 @@
 from kaggle_environments import make
 
-from bots import always_select_first
+from agents import selects_leftmost
 
-AGENT = always_select_first.act
+AGENT = selects_leftmost.act
 
 if __name__ == '__main__':
     env = make('connectx', debug=True)

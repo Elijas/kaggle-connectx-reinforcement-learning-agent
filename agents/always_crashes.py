@@ -1,0 +1,2 @@
+def act():
+    raise Exception

@@ -1,15 +1,20 @@
-# Getting started
+# Environment setup
 
 1. Run `pip install -r requirements.txt`
 
-# Actions
+# Development tools
 
-- Evaluate agent performance by using `tools/evaluate.py`.
+- Run an instance of a game: `tools/run.ipynb`.
 
-- Run an instance of a game by using `tools/run.ipynb`.
+    - Debug individual steps: `tools/debug.py`.
 
-    - Debug individual steps by using `tools/debug.py`.
+- Evaluate agent performance: `tools/evaluate.py`.
 
-- Upload an agent to the official competition (Note: there's a limit of 2 submissions per 24h):
+# Deployment
 
-`$ kaggle competitions submit -c connectx -f bots/always_select_first.py`
+To upload `agents/selects_leftmost.py` agent:
+
+1. Commit all changes made to the repository to the `master` branch
+2. Run `$ ./deploy.sh selects_leftmost`
+
+Note, there's a limit of 2 submissions per 24 hours.
