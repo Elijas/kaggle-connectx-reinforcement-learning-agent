@@ -5,6 +5,7 @@ from bots import always_select_first
 NUM_EPISODES = 500
 AGENTS = [
     'random',
+    'negamax',
     always_select_first.act
 ]
 
@@ -24,4 +25,5 @@ def evaluate_vs_others(agent, enemy_agents=None):
 
 
 if __name__ == '__main__':
-    print(evaluate_vs_others(always_select_first.act))
+    print(evaluate_1v1('negamax', 'random', 100))
+    #print(evaluate_vs_others(always_select_first.act))

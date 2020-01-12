@@ -1,2 +1,3 @@
 kaggle
 kaggle-environments>=0.1.4
+jupyter
