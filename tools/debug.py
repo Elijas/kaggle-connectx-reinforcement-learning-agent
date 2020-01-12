@@ -1,15 +1,13 @@
-from kaggle_environments import make
-
 from agents import selects_leftmost
+from tools._debug import debug_steps
 
-AGENT_1 = selects_leftmost.act
-AGENT_2 = 'negamax'
+
+def step(observation, env):
+    action = selects_leftmost.act(observation, env.configuration)
+    env.render()
+    print("Selected action:", action)
+    return action
+
 
 if __name__ == '__main__':
-    env = make('connectx', debug=True)
-    trainer = env.train([None, AGENT_2])
-    observation = trainer.reset()
-    while not env.done:
-        my_action = AGENT_1(observation, env.configuration)
-        print("My Action", my_action)
-        observation, reward, done, info = trainer.step(my_action)
+    debug_steps(step, enemy_agent=selects_leftmost.act)

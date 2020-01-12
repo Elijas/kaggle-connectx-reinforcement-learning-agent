@@ -1,6 +1,6 @@
 import kaggle_environments
 
-from agents import selects_leftmost, always_crashes
+from agents import selects_leftmost
 
 NUM_EPISODES = 500
 AGENTS = [
@@ -27,5 +27,5 @@ def evaluate_vs_others(agent, enemy_agents=None):
 
 
 if __name__ == '__main__':
-    #print(evaluate_1v1(selects_leftmost.act, 'random', 1))
+    # print(evaluate_1v1(selects_leftmost.act, 'random', 1))
     print(evaluate_vs_others(selects_leftmost.act))
