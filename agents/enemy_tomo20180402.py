@@ -1,4 +1,6 @@
 def act(observation, configuration):
+    assert configuration.columns == 7 and configuration.rows == 6 and configuration.inarow == 4
+
     from random import choice
 
     # me:me_or_enemy=1, enemy:me_or_enemy=2
