@@ -1,6 +1,7 @@
 import kaggle_environments
 
 from agents import selects_leftmost, enemy_bluefool, enemy_tomo20180402
+from tools.patch_with_timer import patch_with_timer
 
 NUM_EPISODES = 10
 AGENTS = [
@@ -29,5 +30,7 @@ def evaluate_vs_others(agent, enemy_agents=None):
 
 
 if __name__ == '__main__':
+    t = patch_with_timer('') # insert the path into the ()
     print(evaluate_1v1(enemy_bluefool.act, 'negamax', NUM_EPISODES))
+    print(t)
     # print(evaluate_vs_others(enemy_bluefool.act))
