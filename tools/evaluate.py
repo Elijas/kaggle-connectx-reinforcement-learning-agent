@@ -19,7 +19,14 @@ def evaluate_1v1(agent1, agent2, num_episodes):
         assert all(r[1] is not None for r in games_results), 'Agent2 has crashed'
         return sum(r[0] for r in games_results) / sum(r[0] + r[1] for r in games_results)
 
-    games_results = kaggle_environments.evaluate("connectx", [agent1, agent2], num_episodes=num_episodes)
+    assert num_episodes >= 1
+    games_results = kaggle_environments.evaluate("connectx", [agent1, agent2],
+                                                 num_episodes=num_episodes - num_episodes // 2)
+    if num_episodes >= 2:
+        # We reversed the agent order, so we have to reverse the result too
+        games_results += [list(reversed(k)) for k in
+                          kaggle_environments.evaluate("connectx", [agent2, agent1],
+                                                       num_episodes=num_episodes // 2)]
     return mean_reward_agent1(games_results)
 
 
@@ -30,5 +37,5 @@ def evaluate_vs_others(agent, enemy_agents=None):
 
 
 if __name__ == '__main__':
-    print(evaluate_1v1(enemy_bluefool.act, 'negamax', NUM_EPISODES))
+    print(evaluate_1v1(enemy_bluefool.act, 'random', NUM_EPISODES))
     # print(evaluate_vs_others(enemy_bluefool.act))
