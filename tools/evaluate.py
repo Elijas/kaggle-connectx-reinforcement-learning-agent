@@ -1,6 +1,6 @@
 import kaggle_environments
 
-from agents import selects_leftmost, enemy_bluefool, enemy_tomo20180402, enemy_paulopinto
+from agents import selects_leftmost, enemy_bluefool, enemy_tomo20180402, enemy_paulopinto, enemy_celiksemih
 
 NUM_EPISODES = 10
 AGENTS = [
@@ -9,7 +9,8 @@ AGENTS = [
     selects_leftmost.act,
     enemy_bluefool.act,
     enemy_tomo20180402.act,
-    enemy_paulopinto.act
+    enemy_paulopinto.act,
+    enemy_celiksemih.act
 ]
 
 

@@ -1,3 +1,4 @@
 kaggle
 kaggle-environments>=0.1.6
 jupyter
+numpy
