@@ -1,5 +1,7 @@
 # Source: https://www.kaggle.com/celiksemih/connectx-heuristic-reward
 def act(observation, configuration):
+    assert configuration.columns == 7 and configuration.rows == 6 and configuration.inarow == 4
+
     import numpy as np
 
     # reward parameters
