@@ -37,4 +37,4 @@ python -m tools.check_sanity "$AGENT_NAME"
 ## Deploy the agent
 MSG=$(date +%Y-%m-%d_%H-%M-%S)
 kaggle competitions submit -c connectx -f ./agents/"$AGENT_NAME".py -m "$MSG"
-printf "\n[%s] Successfully deployed: %s" "$AGENT_NAME" "$MSG"
+printf "\n[%s] Successfully deployed: %s\n" "$AGENT_NAME" "$MSG"
