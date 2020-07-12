@@ -7,7 +7,7 @@ Uploads a given agent to kaggle competition.
 
 Usage: ./%s -a AGENT_NAME
 Options:
-    -a      Agent name. Giving 'agent_name' will upload 'agents/agent_name.py'
+    -a      Agent name
 " "$(basename "$0")"
 }
 
@@ -32,7 +32,7 @@ fi
 cd "${0%/*}"
 
 ## Make sure that the agent doesn't crash in a game
-python -m tools.check_sanity "$AGENT_NAME"
+./play.py "$AGENT_NAME" "$AGENT_NAME"
 
 ## Deploy the agent
 MSG=$(date +%Y-%m-%d_%H-%M-%S)

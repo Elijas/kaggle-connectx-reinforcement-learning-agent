@@ -2,3 +2,7 @@ kaggle
 kaggle-environments>=0.1.6
 jupyter
 numpy
+click~=7.1.2
+pytest
+ipython~=7.16.1
+contexttimer~=0.3.3
