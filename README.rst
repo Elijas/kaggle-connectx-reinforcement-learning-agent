@@ -1,7 +1,7 @@
 kaggle-connectx
 ================
 
-Infrastructure to build agents for _Kaggle_ competition _ConnectX._
+Infrastructure to build agents for *Kaggle* competition *ConnectX.*
 
 
 Environment setup
@@ -22,8 +22,8 @@ Quick start
 
    ~ $ jupyter notebook play.ipynb
 
-- To watch computer agents play against themselves, change the agent name `human` to another agent name, such as `random`, `simple` or `public/negamax`, etc.
-- File names inside `/agent` are agent names.
+- To watch computer agents play against themselves, change the agent name `human` to another agent name, such as ``random``, ``simple`` or ``public/negamax``, etc.
+- File names inside ``/agent`` are agent names.
 
 To play inside terminal instead of Jupyter notebook, use:
 
@@ -37,13 +37,10 @@ More options:
 
    ~ $ ./play.py --help
 
-
-
-
 Run game performance benchmarks
 -------------------------------
 
-Run 1v1 benchmark:
+Run 1v1 benchmark of ``simple`` agent against a ``random`` agent:
 
 .. sourcecode:: bash
 
@@ -86,9 +83,12 @@ Note, there's a limit of 2 submissions per 24 hours.
 Notes
 -----
 The board size and winning condition may change in the future. Add an `assert` at the top of an agent function if the agent is depending on the conditions. For example, to play only in games with the default configuration, use:
-```
-assert configuration.columns == 7 \
-    and configuration.rows == 6 \
-    and configuration.inarow == 4 \
-    and configuration.timeout >= 5
-```
+
+
+.. sourcecode:: python
+
+   assert (configuration.columns == 7
+           and configuration.rows == 6
+           and configuration.inarow == 4
+           and configuration.timeout >= 5)
+
