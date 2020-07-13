@@ -23,7 +23,7 @@ Quick start
    ~ $ jupyter notebook play.ipynb
 
 - To watch computer agents play against themselves, change the agent name `human` to another agent name, such as ``random``, ``simple`` or ``public/negamax``, etc.
-- File names inside ``/agent`` are agent names.
+- File names inside ``/agents`` are agent names.
 
 To play inside terminal instead of Jupyter notebook, use:
 
@@ -44,7 +44,7 @@ Run 1v1 benchmark of ``simple`` agent against a ``random`` agent:
 
 .. sourcecode:: bash
 
-   ~ $ ./benchmark.py simple --enemy_name random
+   ~ $ ./benchmark.py simple --enemy-name random
 
 Run benchmark vs all other agents:
 
@@ -92,3 +92,6 @@ The board size and winning condition may change in the future. Add an `assert` a
            and configuration.inarow == 4
            and configuration.timeout >= 5)
 
+Credits
+-------
+- https://github.com/werner-duvaud/muzero-general (MIT License)
